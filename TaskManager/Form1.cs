@@ -51,7 +51,7 @@ namespace TaskManager
 
         private void SendPizzaMail()
         {
-            MailMessage mail = new MailMessage("pizzaland.is.real@gmail.com", "info@pizza-celentano.rv.ua");
+            MailMessage mail = new MailMessage("pizzaland.is.real@gmail.com", "manekovskiy@gmail.com");
             SmtpClient client = new SmtpClient();
             client.Host = "smtp.googlemail.com";
             client.Port = 587;
