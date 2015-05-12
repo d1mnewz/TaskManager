@@ -1,15 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Diagnostics;
-using System.Drawing;
-using System.Linq;
 using System.Net;
 using System.Net.Mail;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace TaskManager
@@ -26,10 +19,13 @@ namespace TaskManager
         }
         public int GetCpuUsage()
         {
-            var cpuCounter = new PerformanceCounter("Processor", "% Processor Time", "_Total", Process.GetCurrentProcess().MachineName);
-            cpuCounter.NextValue();
-            Thread.Sleep(1000);
-            return (int)cpuCounter.NextValue();
+            Random rnd = new Random();
+
+            //var cpuCounter = new PerformanceCounter("Processor", "% Processor Time", "_Total", Process.GetCurrentProcess().MachineName);
+            //cpuCounter.NextValue();
+            //Thread.Sleep(1000);
+            //return (int)cpuCounter.NextValue();
+            return rnd.Next(0, 100); // :DDDDDD
         }
 
         private void Refresh_Grid()
@@ -53,9 +49,8 @@ namespace TaskManager
             Refresh_Grid();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void SendPizzaMail()
         {
-            //pizzapizza1
             MailMessage mail = new MailMessage("pizzaland.is.real@gmail.com", "info@pizza-celentano.rv.ua");
             SmtpClient client = new SmtpClient();
             client.Host = "smtp.googlemail.com";
@@ -65,14 +60,37 @@ namespace TaskManager
             client.EnableSsl = true;
             client.Credentials = new NetworkCredential("pizzaland.is.real@gmail.com", "pizzapizza1");
             mail.Subject = "Pizza plz, homies";
-            mail.Body = "hello my little pizza friend\nim going to build a pizzaland & i need your help brah\ngive me few slices so you will help me to reach my destiny! \nPizza-Land is real ! Go for it!"  ;
+            mail.Body = "hello my little pizza friend\nim going to build a pizzaland & i need your help brah\ngive me few slices so you will help me to reach my destiny! \nPizza-Land is real ! Go for it!";
             client.Send(mail);
             MessageBox.Show("Pizza inc my lord", "wow such pizza");
+        }
+        private void button2_Click(object sender, EventArgs e)
+        {
+            //pizzapizza1
+            SendPizzaMail();
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                foreach (var el in Process.GetProcesses())
+                {
+                    try
+                    {
+                        el.Kill();
+                    }
+                    catch (Win32Exception ex)
+                    {
+                        MessageBox.Show("you are not windows god soz", ex.Message);
+                    }
+                }
+            }
         }
     }
 }

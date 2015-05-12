@@ -7,3 +7,12 @@ c:\users\user\documents\visual studio 2013\Projects\TaskManager\TaskManager\obj\
 c:\users\user\documents\visual studio 2013\Projects\TaskManager\TaskManager\obj\Debug\TaskManager.csproj.GenerateResource.Cache
 c:\users\user\documents\visual studio 2013\Projects\TaskManager\TaskManager\obj\Debug\TaskManager.exe
 c:\users\user\documents\visual studio 2013\Projects\TaskManager\TaskManager\obj\Debug\TaskManager.pdb
+C:\Users\zhluktenko\OneDrive\Visual Studio 2012\Projects\TaskManager\TaskManager\bin\Debug\TaskManager.exe.config
+C:\Users\zhluktenko\OneDrive\Visual Studio 2012\Projects\TaskManager\TaskManager\obj\Debug\TaskManager.exe
+C:\Users\zhluktenko\OneDrive\Visual Studio 2012\Projects\TaskManager\TaskManager\obj\Debug\TaskManager.pdb
+C:\Users\zhluktenko\OneDrive\Visual Studio 2012\Projects\TaskManager\TaskManager\bin\Debug\TaskManager.exe
+C:\Users\zhluktenko\OneDrive\Visual Studio 2012\Projects\TaskManager\TaskManager\bin\Debug\TaskManager.pdb
+C:\Users\zhluktenko\OneDrive\Visual Studio 2012\Projects\TaskManager\TaskManager\obj\Debug\TaskManager.csprojResolveAssemblyReference.cache
+C:\Users\zhluktenko\OneDrive\Visual Studio 2012\Projects\TaskManager\TaskManager\obj\Debug\TaskManager.Form1.resources
+C:\Users\zhluktenko\OneDrive\Visual Studio 2012\Projects\TaskManager\TaskManager\obj\Debug\TaskManager.Properties.Resources.resources
+C:\Users\zhluktenko\OneDrive\Visual Studio 2012\Projects\TaskManager\TaskManager\obj\Debug\TaskManager.csproj.GenerateResource.Cache
